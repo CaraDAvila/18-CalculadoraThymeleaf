@@ -14,7 +14,7 @@ public class CalculadoraService {
             case "multiplicacao"->n1*n2;
             case "divisao"->dividir(n1,n2);
 
-            default -> throw new IllegalArgumentException();
+            default -> throw new IllegalArgumentException("ERRO: operação inválida");
         };
     }
 
@@ -22,6 +22,6 @@ public class CalculadoraService {
         if (n2==0){
             throw new IllegalArgumentException("ERRO: divisão impossível");
         }
-        return n1/n2;
+        return (double) n1/n2;
     }
 }

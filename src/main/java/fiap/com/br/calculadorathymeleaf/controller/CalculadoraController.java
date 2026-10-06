@@ -25,7 +25,7 @@ public class CalculadoraController {
         try{
           model.addAttribute("resultado",service.calcular(n1,n2,operacao));
         } catch (IllegalArgumentException e){
-            model.addAttribute("ERRO: ?",e.getMessage());
+            model.addAttribute("erro",e.getMessage());
         }
         return "index";
     }
